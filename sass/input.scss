@@ -24,12 +24,7 @@ $screen-sm-min: 576px;
 
 // Variables
 $blue: #29b6f6;
-
-h1,
-h2 {
-  font-family: "Fredoka One", sans-serif;
-  color: #fff;
-}
+$display-font: "Fredoka One", sans-serif;
 
 header {
   width: 100vw;
@@ -38,6 +33,7 @@ header {
   flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: space-around;
+  font-family: $display-font;
   color: #fff;
   @include sm {
     height: 100vh;
@@ -55,7 +51,7 @@ header {
     margin-bottom: 0.5rem;
   }
   button {
-    font-family: "Fredoka One", sans-serif;
+    font-family: $display-font;
     font-size: 20px;
     background: $blue;
     border-radius: 10px;
@@ -63,6 +59,34 @@ header {
     padding: 1rem 1rem;
     @include sm {
       width: 80%;
+    }
+  }
+}
+.feature-container {
+  margin-top: 5rem;
+  width: 100vw;
+  font-family: $display-font;
+  color: #707070;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  @include sm {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  div {
+    width: 150px;
+    text-align: center;
+    @include sm {
+      margin-bottom: 2rem;
+    }
+    span {
+      height: 3rem;
+      font-size: 50px;
+    }
+    h2 {
+      margin: 1rem 0;
     }
   }
 }
